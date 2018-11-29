@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    body {
+        background: url(../FontForRuRuletka.jpg) no-repeat;
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+    }
+</style>
+<head>
+    <title>Registration</title>
+</head>
+<body>
+Add new User
+{{#message}}
+{{message}}
+{{/message}}
+<form action="/registration" method="post">
+    <div><label>User Name : <input type="text" name="username"/> </label></div>
+    <div><label>Password : <input type="password" name="password"/> </label></div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <div><input type="submit" value="Sign In"></div>
+</form>
+</body>
+</html>

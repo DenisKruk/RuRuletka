@@ -22,7 +22,39 @@ public class User implements UserDetails {
 
     private boolean active;
 
-    private int [] score = new int [5];
+    private int [] score ;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public int[] getScore() {
+        return score;
+    }
+
+    public void setScore(int[] score) {
+        this.score = score;
+    }
 
     public User(String username, String password, boolean active, int[] score) {
         this.username = username;
